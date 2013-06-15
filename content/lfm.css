@@ -1,0 +1,52 @@
+html,body{
+	font-size: 1em;
+}
+
+#contentwrapper{
+	float: left;
+	width: 100%;
+}
+
+#leftcolumn{
+	float: left;
+	width: 200px;
+	margin-left: -100%;	
+}
+
+#contentcolulm{
+	margin: 0 0 0 200px;
+}
+
+.div-bordered{
+	border-width: 1;
+	border-color: black;
+}
+
+.l-cell{
+	float:left;/*fix for  buggy browsers*/
+  	display:table-cell;         
+  	width:100px;   
+  	white-space: nowrap;
+  	overflow: hidden;
+  	border-color: rgb(0,0,0);
+  	border-width: 2;  	
+}
+
+.l-row{
+	display:table-row;
+  	width:auto;
+ 	/*clear:both;*/
+ 	background-color:#cdF; 
+}
+
+.l-table{
+	display:table;         
+ 	width:auto;         
+  	background-color:#eee;         
+  	border:1px solid  #666666;         
+  	border-spacing:2px;/*cellspacing:poor IE support for  this*/
+}
+
+.ui-selected{
+	background-color: #aaFFaa;
+}
