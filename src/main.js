@@ -67,7 +67,8 @@ $(document).ready(function() {
 		},
 		columns: [{
 				field: "Fornavn",
-				width: "80px"
+				width: "80px",
+				title: "Units In Stock"
 			}, {
 				field: "Etternavn",
 				width: "90px"

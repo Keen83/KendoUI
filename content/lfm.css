@@ -30,6 +30,7 @@ html,body{
   	overflow: hidden;
   	border-color: rgb(0,0,0);
   	border-width: 2;  	
+  	padding: 1,1,1,1;
 }
 
 .l-row{
