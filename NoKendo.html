@@ -25,9 +25,9 @@
 				<input type="radio" id="sort_claims_btn" name="arf_sort"><label for="sort_claims_btn">Claims</label></input>
 			</div>
 			<div id="grid" class="l-table">
-				<div id="search_result" data-bind="foreach: arfData">
-					<div class="selectable-item l-row">
-						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Fornavn" ></span></div> 
+				<div id="search_result" data-bind="template: {name: 'itemTemplate', foreach: itemsToShow} arfData">
+					<!-- <div class="selectable-item l-row">
+						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Fornavn" ></span></div>
 						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Etternavn" ></span></div>
 						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Kjonn" ></span></div>
 						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Alder" ></span></div>
@@ -40,16 +40,22 @@
 						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArsLonn" ></span></div>
 						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: TilleggsSum" ></span></div>
 						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: LonnProsent" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: KravTilbut" ></span></div>						
-					</div>
+						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: KravTilbut" ></span></div>
+					</div> -->
 				</div>
 			</div>
 		>		</div>
 		<script src="js/jquery.min.js"></script>
 		<script src="src/utvalgsbegrenser.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>	
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 		<script src="libs/knockout-2.2.1.js"></script>
 		<script type="text/javascript" src="src/nokendo.js"></script>
+		<script type="text/html" id="defaultItemTemplate">
+			<div class="selectable-item l-row" data-bind="template: {name: 'cell-template', foreach: cell }"></div>
+		</script>
+		<script type="text/html" id="defaultCellTemplate">
+			<div class="l-cell" data-bind="css: defaultCell"><span data-bind="text: cellText" ></span></div>
+		</script>
 	</body>
-</html>										
+</html>

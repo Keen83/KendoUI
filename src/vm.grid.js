@@ -1,9 +1,13 @@
-var gridViewModel = function(){
+var gridViewModel = function(data){
+	var itemTemplate = ko.observable();
+	var itemsToShow = ko.observableCollection();
+
 	function setSchema(){
 
 	}
 
 	return {
-		setSchema: setSchema
+		setSchema: setSchema,
+		itemTemplate: itemTemplate
 	};
 };
