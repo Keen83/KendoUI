@@ -9,7 +9,7 @@
 	<body>
 		<div id="content">
 			<div id="arf_sort">
-				<div class="sort-option" type="radio" id="sort_velg_btn" name="arf_sort"><label for="sort_velg_btn">Velg</label></div>
+				<!-- <div class="sort-option" type="radio" id="sort_velg_btn" name="arf_sort"><label for="sort_velg_btn">Velg</label></div> -->
 				<input type="radio" id="sort_fornavn_btn" name="arf_sort"><label for="sort_fornavn_btn">Fornavn</label></input>
 				<input type="radio" id="sort_etternavn_btn" name="arf_sort"><label for="sort_etternavn_btn">Etternavn</label></input>
 				<input type="radio" id="sort_kjonn_btn" name="arf_sort"><label for="sort_kjonn_btn">Kjonn</label></input>
@@ -21,12 +21,15 @@
 				<input type="radio" id="sort_stillingskode_btn" name="arf_sort"><label for="sort_stillingskode_btn">Stillingskode</label></input>
 				<input type="radio" id="sort_stkbeskrivelse_btn" name="arf_sort"><label for="sort_stkbeskrivelse_btn">Stillingsbeskrivelse</label></input>
 				<input type="radio" id="sort_arslonn_btn" name="arf_sort"><label for="sort_arslonn_btn">ÅrsLønn</label></input>
+				<input type="radio" id="sort_tggsum_btn" name="arf_sort"><label for="sort_arslonn_btn">TilleggsSum</label></input>
 				<input type="radio" id="sort_lonnsprosent_btn" name="arf_sort"><label for="sort_lonnsprosent_btn">Lønnsprosent</label></input>
 				<input type="radio" id="sort_claims_btn" name="arf_sort"><label for="sort_claims_btn">Claims</label></input>
 			</div>
 			<div id="grid" class="l-table">
-				<div id="search_result" data-bind="template: {name: 'itemTemplate', foreach: itemsToShow} arfData">
-					<!-- <div class="selectable-item l-row">
+				<div id="search_result" data-bind="template: {name: 'defaultItemTemplate', foreach: itemsToShow}"></div>
+				<script type="text/html" id="defaultItemTemplate">
+					<div class="selectable-item l-row" /*data-bind="template: {name: 'cell-template', foreach: cell }"*/>
+						<div class="selectable-item l-row">
 						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Fornavn" ></span></div>
 						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Etternavn" ></span></div>
 						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Kjonn" ></span></div>
@@ -41,8 +44,9 @@
 						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: TilleggsSum" ></span></div>
 						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: LonnProsent" ></span></div>
 						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: KravTilbut" ></span></div>
-					</div> -->
-				</div>
+					</div>
+					<div>
+				</script>
 			</div>
 		>		</div>
 		<script src="js/jquery.min.js"></script>
@@ -51,11 +55,9 @@
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 		<script src="libs/knockout-2.2.1.js"></script>
 		<script type="text/javascript" src="src/nokendo.js"></script>
-		<script type="text/html" id="defaultItemTemplate">
-			<div class="selectable-item l-row" data-bind="template: {name: 'cell-template', foreach: cell }"></div>
-		</script>
+		
 		<script type="text/html" id="defaultCellTemplate">
-			<div class="l-cell" data-bind="css: defaultCell"><span data-bind="text: cellText" ></span></div>
+			<div class="l-cell" /*data-bind="css: defaultCell"*/><span /*data-bind="text: cellText" */>Hello</span></div>
 		</script>
 	</body>
 </html>

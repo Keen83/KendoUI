@@ -3,7 +3,13 @@
 	_.each(data, function(item){
 		_.extend(item, {colWidth: colWidth});
 	});
-	ko.applyBindings({arfData: data});
+
+	ko.applyBindings({
+		itemsToShow: data,
+		itemTemplate: function(){
+			return "defaultItemTemplate";
+		}
+     });
 })($, arbeidsforholdData);
 
 $(function() {
