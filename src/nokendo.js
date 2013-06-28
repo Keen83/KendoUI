@@ -3,11 +3,13 @@
 	var itemsToShow = _.first(data, 30);
 	var keyValues = [];
 	_.each(itemsToShow, function(item) {
+		var keyVal = getKeyValues(item);
 		_.extend(item, {
-			colWidth: colWidth
+			colWidth: colWidth,
+			cells: keyVal
 		});
-		keyValues.push(getKeyValues(item));
 	});
+
 	ko.applyBindings({
 		itemsToShow: itemsToShow,
 		itemTemplate: function() {
