@@ -28,27 +28,25 @@
 			<div id="grid" class="l-table">
 				<div id="search_result" data-bind="template: {name: 'defaultItemTemplate', foreach: itemsToShow}"></div>
 				<script type="text/html" id="defaultItemTemplate">
-					<div class="selectable-item l-row" /*data-bind="template: {name: 'cell-template', foreach: cell }"*/>
-						<div class="selectable-item l-row">
-						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Fornavn" ></span></div>
-						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Etternavn" ></span></div>
-						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Kjonn" ></span></div>
-						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Alder" ></span></div>
-						<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArbStedNr" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Arbeidsted" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArbfNr" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Ansattforhold" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Stillingskode" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Stillingsbeskrivelse" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArsLonn" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: TilleggsSum" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: LonnProsent" ></span></div>
-						<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: KravTilbut" ></span></div>
+					<div class="selectable-item l-row">
+										<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Fornavn" ></span></div>
+										<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Etternavn" ></span></div>
+										<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Kjonn" ></span></div>
+										<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Alder" ></span></div>
+										<div class="l-cell" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArbStedNr" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Arbeidsted" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArbfNr" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Ansattforhold" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Stillingskode" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: Stillingsbeskrivelse" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: ArsLonn" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: TilleggsSum" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: LonnProsent" ></span></div>
+										<div class="l-cell not-important" data-bind="style: { width: colWidth() + 'px' }"><span data-bind="text: KravTilbut" ></span></div>
 					</div>
-					<div>
 				</script>
 			</div>
-		>		</div>
+		</div>
 		<script src="libs/jquery-1.10.1.js"></script>
 		<script src="src/utvalgsbegrenser.js"></script>
 		<script src="libs/jquery-ui.js"></script>
@@ -57,7 +55,7 @@
 		<script type="text/javascript" src="src/nokendo.js"></script>
 		
 		<script type="text/html" id="defaultCellTemplate">
-			<div class="l-cell" /*data-bind="css: defaultCell"*/><span /*data-bind="text: cellText" */>Hello</span></div>
+			<div class="l-cell"><span>Hello</span></div>
 		</script>
 	</body>
 </html>
