@@ -2,14 +2,14 @@
 	var colWidth = ko.observable(100);
 	var itemsToShow = _.first(data, 30);
 	var keyValues = [];
-	_.each(data, function(item) {
+	_.each(itemsToShow, function(item) {
 		_.extend(item, {
 			colWidth: colWidth
 		});
 		keyValues.push(getKeyValues(item));
 	});
 	ko.applyBindings({
-		itemsToShow: data,
+		itemsToShow: itemsToShow,
 		itemTemplate: function() {
 			return "defaultItemTemplate";
 		}
