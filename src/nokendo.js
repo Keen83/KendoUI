@@ -1,15 +1,30 @@
 (function($, data) {
 	var colWidth = ko.observable(100);
-	_.each(data, function(item){
-		_.extend(item, {colWidth: colWidth});
+	var itemsToShow = _.first(data, 30);
+	var keyValues = [];
+	_.each(data, function(item) {
+		_.extend(item, {
+			colWidth: colWidth
+		});
+		keyValues.push(getKeyValues(item));
 	});
-
 	ko.applyBindings({
 		itemsToShow: data,
-		itemTemplate: function(){
+		itemTemplate: function() {
 			return "defaultItemTemplate";
 		}
-     });
+	});
+
+	function getKeyValues(jsonObj) {
+		var keys = [];
+		for (var i in jsonObj) {
+			keys.push({
+				propKey: i,
+				propValue: jsonObj[i]
+			});
+		}
+		return keys;
+	}
 })($, arbeidsforholdData);
 
 $(function() {
