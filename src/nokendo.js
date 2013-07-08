@@ -1,7 +1,7 @@
 (function($, data) {
 	var colWidth = ko.observable(100);
 	var itemsToShow = _.first(data, 30);
-	var schema = getSchema();	
+	var schema = getSchema();
 	var keyValues = [];
 	_.each(itemsToShow, function(item) {
 		var keyVal = getKeyValues(item);
@@ -39,7 +39,8 @@
 			cellWidth: ko.observable(200)
 		}, {
 			dataField: "KravTilbut",
-			cellWidth: ko.observable(40)
+			cellWidth: ko.observable(40),
+			template: "boolCellTemplate"
 		}];
 	}
 
@@ -50,19 +51,18 @@
 				propKey: i,
 				propValue: jsonObj[i]
 			};
-			var col =  _.find(schema, isCorrectCol, i);
-			if (col)
-			{
-				cell.prototype = col;
+			var col = _.find(schema, isCorrectCol, i);
+			if (col) {
+				_.extend(cell, col);
 				keys.push(cell);
 			}
 		}
 		return keys;
 	}
 
-	function isCorrectCol(col){
-				return col.dataField == this;
-			}
+	function isCorrectCol(col) {
+		return col.dataField == this;
+	}
 })($, arbeidsforholdData);
 
 $(function() {
