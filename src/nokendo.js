@@ -1,6 +1,7 @@
 (function($, data) {
 	var colWidth = ko.observable(100);
 	var itemsToShow = _.first(data, 30);
+	var schema = getSchema();	
 	var keyValues = [];
 	_.each(itemsToShow, function(item) {
 		var keyVal = getKeyValues(item);
@@ -17,16 +18,51 @@
 		}
 	});
 
+	function getSchema() {
+		return [{
+			dataField: "Fornavn",
+			cellWidth: ko.observable(80)
+		}, {
+			dataField: "Etternavn",
+			cellWidth: ko.observable(80)
+		}, {
+			dataField: "Kjonn",
+			cellWidth: ko.observable(60)
+		}, {
+			dataField: "Alder",
+			cellWidth: ko.observable(50)
+		}, {
+			dataField: "ArbStedNr",
+			cellWidth: ko.observable(80)
+		}, {
+			dataField: "Arbeidsted",
+			cellWidth: ko.observable(200)
+		}, {
+			dataField: "KravTilbut",
+			cellWidth: ko.observable(40)
+		}];
+	}
+
 	function getKeyValues(jsonObj) {
 		var keys = [];
 		for (var i in jsonObj) {
-			keys.push({
+			var cell = {
 				propKey: i,
 				propValue: jsonObj[i]
-			});
+			};
+			var col =  _.find(schema, isCorrectCol, i);
+			if (col)
+			{
+				cell.prototype = col;
+				keys.push(cell);
+			}
 		}
 		return keys;
 	}
+
+	function isCorrectCol(col){
+				return col.dataField == this;
+			}
 })($, arbeidsforholdData);
 
 $(function() {
