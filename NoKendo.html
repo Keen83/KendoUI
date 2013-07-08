@@ -28,20 +28,22 @@
 			<div id="grid" class="l-table">
 				<div id="search_result" data-bind="template: {name: 'defaultItemTemplate', foreach: itemsToShow, as: 'rowData' }"></div>
 				<script type="text/html" id="defaultItemTemplate">
-					<div class="selectable-item l-row" data-bind="template: {name: 'defaultCellTemplate', foreach: cells }"></div>
+					<div class="selectable-item l-row">
+						<div data-bind="template: {name: 'defaultCellTemplate', foreach: cells }"></div>
+						<div class="detail-info"><span>Some detail information should be here</span></div>
+					</div>					
 				</script>
 				<script type="text/html" id="defaultCellTemplate">
 					<div class="l-cell" data-bind="style: { width: rowData.colWidth() + 'px' }"><span data-bind="text: propValue" ></div>
 				</script>
 			</div>
 		</div>
-		<script src="libs/jquery-1.10.1.js"></script>
+		<script src="libs/jquery-1.10.1.js"></script>		
 		<script src="src/utvalgsbegrenser.js"></script>
 		<script src="libs/jquery-ui.js"></script>
 		<script type="text/javascript" src="libs/underscore.js"></script>
 		<script src="libs/knockout-2.2.1.js"></script>
-		<script type="text/javascript" src="src/nokendo.js"></script>
-		
+		<script type="text/javascript" src="src/nokendo.js"></script>	
 		
 	</body>
 </html>

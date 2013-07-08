@@ -74,6 +74,10 @@ html,body{
 	padding: 0.1em 0.1em;	
 }
 
+.detail-info{
+	display: none;
+}
+
 @media screen and (max-width: 800px) {
 	.not-important{
 		display: none;
@@ -81,17 +85,12 @@ html,body{
 
 	.l-row{
 		display:table-row;
-	  	width:auto;
-	 	/*clear:both;*/
-	 	/*background-color:#cdF; */
+	  	width:auto;	 	
+	}
+
+	.l-row:hover .detail-info {
+		display: block;
+		clear: both;
 	}
 }
 
-@media screen and (max-width: 800px) {
-	.l-row{
-		display:table-row;
-	  	width:auto;
-	 	/*clear:both;*/
-	 	/*background-color:#cdF; */
-	}
-}
