@@ -24,7 +24,7 @@ html,body{
 	display:table;         
  	width:auto;         
   	background-color:#eee;         
-  	border:1px solid  #aaaaaa;         
+  	border:1px solid  #1aa;         
   	border-spacing:0;/*cellspacing:poor IE support for  this*/
 }
 
@@ -44,25 +44,24 @@ html,body{
 }
 
 .l-row{
-	display:table-row;
-  	
+	display:table-row;  	
 }
 
 .l-row:nth-child(odd){
-	background-color:#cdF;	
+	background-image: -webkit-linear-gradient(top, #abd, #deF, #abd);	
 }
 
-.lrow:nth-child(even){
-	background-color:#ffa;
-}
-
-.ui-selected:nth-child(even){
-	background-color: #88aaff;
-	color:white;
+.l-row:nth-child(even){
+	background-image: -webkit-linear-gradient(top, #2192CB, #15B3CB, #2192CB);	
 }
 
 .ui-selected:nth-child(odd){
-	background-color: #4699aa;
+	background-image: -webkit-linear-gradient(top, #113F6D, #175696, #113F6D);	
+	color:white;
+}
+
+.ui-selected:nth-child(even){
+	background-image: -webkit-linear-gradient(top, #113F6D, #175696, #113F6D);	
 	color:white;
 }
 
