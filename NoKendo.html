@@ -25,24 +25,24 @@
 				<input type="radio" id="sort_lonnsprosent_btn" name="arf_sort"><label for="sort_lonnsprosent_btn">Lønnsprosent</label></input>
 				<input type="radio" id="sort_claims_btn" name="arf_sort"><label for="sort_claims_btn">Claims</label></input>
 			</div>
-			<div id="grid" class="l-table">
-				<div id="search_result" data-bind="template: {name: 'defaultItemTemplate', foreach: itemsToShow, as: 'rowData' }"></div>
+			<div id="grid">
+				<div id="search_result" class="l-table" data-bind="template: {name: 'defaultItemTemplate', foreach: itemsToShow, as: 'rowData' }"></div>
 				
 				<script type="text/html" id="defaultItemTemplate">
 					<div class="selectable-item l-row">
 						<div data-bind="foreach: cells">
-							<div data-bind="template: { name: 'defaultCellTemplate', data: $data }"></div>
+							<div class="l-cell" data-bind="template: { name: cellTemplate, data: $data }, style: { width: cellWidth() + 'px' }"></div>
 						</div>
 						<div class="detail-info"><span>Some detail information should be here</span></div>
 					</div>					
 				</script>
 
 				<script type="text/html" id="defaultCellTemplate">
-					<div class="l-cell" data-bind="style: { width: cellWidth() + 'px' }"><span data-bind="text: propValue" ></div>
+					<span data-bind="text: propValue" >
 				</script>
 
 				<script type="text/html" id="boolCellTemplate">
-					<div class="l-cell" data-bind="style: { width: cellWidth() + 'px' }">
+					<div class="l-cell-bool">
 						<input type='checkbox' data-bind="checked: propValue"></input>
 					</div>
 				</script>

@@ -2,8 +2,7 @@ html,body{
 	font-size: 1em;
 }
 
-.sort-option{
-	
+.sort-option{	
 }
 
 #leftcolumn{
@@ -12,12 +11,12 @@ html,body{
 	margin-left: -100%;	
 }
 
-#contentcolulm{
+#contentcolulm {
 	margin: 0 0 0 200px;
 }
 
 .div-bordered{
-	border-width: 1;
+	border-width: 1px;
 	border-color: black;
 }
 
@@ -25,8 +24,8 @@ html,body{
 	display:table;         
  	width:auto;         
   	background-color:#eee;         
-  	border:1px solid  #666666;         
-  	border-spacing:0px;/*cellspacing:poor IE support for  this*/
+  	border:1px solid  #aaaaaa;         
+  	border-spacing:0;/*cellspacing:poor IE support for  this*/
 }
 
 .l-cell{
@@ -35,16 +34,18 @@ html,body{
   	width:100px;
   	white-space: nowrap;
   	overflow: hidden;
-  	border-color: #333333;
-  	border-width: 1px;  
+  	border-color: #999;
+  	border-left-width: 1px;  
+  	border-top-width: 1px;
+  	border-bottom-width: 0;
+  	border-right-width: 0;
   	border-style: solid;	
-  	margin: 1px;
+  	padding: 3px;
 }
 
 .l-row{
 	display:table-row;
-  	width:auto;
- 	clear:both;
+  	
 }
 
 .l-row:nth-child(odd){
@@ -76,6 +77,10 @@ html,body{
 
 .detail-info{
 	display: none;
+}
+
+.l-cell-bool{
+	text-align: center;
 }
 
 @media screen and (max-width: 800px) {

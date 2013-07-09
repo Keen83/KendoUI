@@ -39,7 +39,8 @@
 			cellWidth: ko.observable(200)
 		}, {
 			dataField: "KravTilbut",
-			cellWidth: ko.observable(40)
+			cellWidth: ko.observable(40),
+			template: "boolCellTemplate"
 		}];
 	}
 
