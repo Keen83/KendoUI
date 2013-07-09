@@ -39,8 +39,7 @@
 			cellWidth: ko.observable(200)
 		}, {
 			dataField: "KravTilbut",
-			cellWidth: ko.observable(40),
-			template: "boolCellTemplate"
+			cellWidth: ko.observable(40)
 		}];
 	}
 
@@ -54,6 +53,7 @@
 			var col = _.find(schema, isCorrectCol, i);
 			if (col) {
 				_.extend(cell, col);
+				_.extend(cell, {cellTemplate: cellTemplate});
 				keys.push(cell);
 			}
 		}
@@ -62,6 +62,10 @@
 
 	function isCorrectCol(col) {
 		return col.dataField == this;
+	}
+
+	function cellTemplate(col){
+		return col.template || "defaultCellTemplate";
 	}
 })($, arbeidsforholdData);
 
