@@ -48,21 +48,21 @@ html,body{
 }
 
 .l-row:nth-child(odd){
-	background-image: -webkit-linear-gradient(top, #abd, #deF, #abd);	
+	background-image: -webkit-linear-gradient(top, #e9eeef, #e4eced, #bFcacb);	
 }
 
 .l-row:nth-child(even){
-	background-image: -webkit-linear-gradient(top, #2192CB, #15B3CB, #2192CB);	
+	background-image: -webkit-linear-gradient(top, #9EC1FF, #84B0FF, #75A6FF);	
 }
 
 .ui-selected:nth-child(odd){
-	background-image: -webkit-linear-gradient(top, #113F6D, #175696, #113F6D);	
-	color:white;
+	background-image: -webkit-linear-gradient(top, #224F7e, #2867a7, #224F7e);	
+	color:#DDb;
 }
 
 .ui-selected:nth-child(even){
-	background-image: -webkit-linear-gradient(top, #113F6D, #175696, #113F6D);	
-	color:white;
+	background-image: -webkit-linear-gradient(top, #224F7e, #2867a7, #224F7e);
+	color:#DDb;
 }
 
 .ui-widget{
