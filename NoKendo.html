@@ -42,8 +42,8 @@
 				</script>
 
 				<script type="text/html" id="boolCellTemplate">
-					<div class="l-cell-bool">
-						<input type='checkbox' data-bind="checked: propValue == 'True' ? true : false"></input>
+					<div data-bind="if: propValue == 'True' ? true : false" class="l-cell-bool">
+						<img src="content/notes.png" alt="True" height="15" width="15">						
 					</div>
 				</script>
 			</div>
