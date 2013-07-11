@@ -26,7 +26,7 @@
 				<input type="radio" id="sort_claims_btn" name="arf_sort"><label for="sort_claims_btn">Claims</label></input>
 			</div>
 			<div id="grid">
-				<div id="search_result" class="l-table" data-bind="template: {name: 'defaultItemTemplate', foreach: itemsToShow, as: 'rowData' }"></div>
+				<div id="search_result" class="l-table" data-bind="template: {name: itemTemplate, foreach: itemsToShow, as: 'rowData' }"></div>
 				
 				<script type="text/html" id="defaultItemTemplate">
 					<div class="selectable-item l-row">
